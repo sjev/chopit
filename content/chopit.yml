@@ -1,2 +1,6 @@
 index:
-  template: index.jinja
+  template: index.tpl
+  components:
+    about:
+      content: about.md
+      template: two_cols.tpl
