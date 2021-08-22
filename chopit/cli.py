@@ -26,8 +26,13 @@ def cli(src,dest):
     src_path = Path(src).absolute()
     click.echo(f'Source path: {src_path}')
 
+    dest_path = Path(dest).absolute()
+
     try:
         assert src_path.exists(), 'Source path not found'
+
+        if not dest_path.exists():
+            dest_path.mkdir()
 
     except Exception as e:
         click.echo(f'Error: {e}')
