@@ -10,31 +10,24 @@ It can be used as a handy facility for running the task from a command line.
 
 """
 
+from pathlib import Path
 import click
 import chopit
 
 __version__ = chopit.__version__
 
-
-
 @click.command()
-def hello():
-    """Say 'hello' to the nice people."""
-    click.echo("chopit says 'hello'")
-
-
-@click.command()
-def version():
-    """Get the library version."""
-    click.echo(click.style(f"{__version__}", bold=True))
-
-
-@click.group()
 @click.version_option(version=__version__)
-def cli():
-    """ main entrypoint cli"""
+@click.option('--src', default='content', help='source folder for content files')
+@click.option('--dest', default='site', help='destination folder ')
+def cli(src,dest):
+    """ markdown and jinja2 site builder"""
 
+    src_path = Path(src).absolute()
+    click.echo(f'Source path: {src_path}')
 
+    try:
+        assert src_path.exists(), 'Source path not found'
 
-if __name__ == "__main__":
-    cli()
+    except Exception as e:
+        click.echo(f'Error: {e}')
