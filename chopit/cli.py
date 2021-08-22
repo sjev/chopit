@@ -2,11 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-This is the entry point for the command-line interface (CLI) application.
-
-It can be used as a handy facility for running the task from a command line.
-
-
+**chopit** - simple static website builder
 
 """
 
