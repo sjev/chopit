@@ -1,0 +1,21 @@
+site_name: chopit
+theme: material
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - attr_list
+
+plugins:
+  - mkdocstrings:
+      handlers:
+        python:
+          setup_commands:
+            - import sys
+            - sys.path.append("..")
+  - search
+
+nav:
+  - "index.md"
+  - "code-reference.md"
+  - "md-reference.md"

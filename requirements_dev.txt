@@ -1,0 +1,13 @@
+click
+pip-check-reqs
+pip-licenses
+pylint
+black
+pytest
+pytest-cov
+pytest-pythonpath
+setuptools
+mkdocs-material
+mkdocstrings
+tox
+twine
