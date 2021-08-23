@@ -76,7 +76,10 @@ class MD_Parser:
             else:
                 data['content'] += line
 
-        return blocks
+
+
+
+
 
 
 
