@@ -1,6 +1,3 @@
 index:
-  template: index.tpl
-  components:
-    about:
-      content: about.md
-      template: two_cols.tpl
+  template: index.html
+  content: index.md
