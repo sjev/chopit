@@ -1,3 +1,5 @@
+This text will be ignored, does not belong to a block.
+
 ---
 name: block_1
 ---
